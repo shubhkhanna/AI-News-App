@@ -15,7 +15,14 @@ const NewsCard = ({
   activeArticles,
 }) => {
   return (
-    <Card className={`shadow ${activeArticles === i ? "activeCard" : null}`}>
+    <Card
+      className={`${activeArticles === i ? "activeCard" : null}`}
+      style={{
+        borderRadius: "10px",
+        backgroundColor: "#ecf0f3",
+        boxShadow: "8px 8px 19px #dbdfe2, -8px -8px 19px #fdffff",
+      }}
+    >
       <CardImg top width="100%" src={urlToImage || News} alt={source.name} />
       <CardBody>
         <div

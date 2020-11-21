@@ -11,23 +11,20 @@ import NewsCard from "../NewsCard/NewsCard";
 
 const infoCards = [
   {
-    color: "#fdcb9d30",
-    title: "News by Categories",
-    info:
-      "Business, Entertainment, General, Health, Science, Sports, Technology",
-    text: "Give me the latest Technology news",
+    title: "News by Sources",
+    info: "CNN, Wired, BBC News, Time, IGN, Buzzfeed, ABC News...",
+    text: "Give me the news from CNN",
   },
   {
-    color: "#fdcb9d30",
     title: "News by Terms",
     info: "Bitcoin, PlayStation 5, Smartphones, Donald Trump...",
     text: "What's up with PlayStation 5",
   },
   {
-    color: "#fdcb9d30",
-    title: "News by Sources",
-    info: "CNN, Wired, BBC News, Time, IGN, Buzzfeed, ABC News...",
-    text: "Give me the news from CNN",
+    title: "News by Categories",
+    info:
+      "Business, Entertainment, General, Health, Science, Sports, Technology",
+    text: "Give me the latest Technology news",
   },
 ];
 
@@ -46,8 +43,12 @@ const NewsCards = ({ articles, activeArticles }) => {
               key={index}
             >
               <Card
-                className="shadow-sm p-3 w-100 text-center"
-                style={{ borderRadius: "8px", backgroundColor: infoCard.color }}
+                className="p-3 w-100 text-center"
+                style={{
+                  borderRadius: "10px",
+                  backgroundColor: "#ecf0f3",
+                  boxShadow: "8px 8px 19px #dbdfe2, -8px -8px 19px #fdffff",
+                }}
               >
                 <CardTitle tag="h2">{infoCard.title}</CardTitle>
                 {infoCard.info ? (
